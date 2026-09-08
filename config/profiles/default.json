@@ -1,0 +1,11 @@
+{
+  "name": "default",
+  "description": "Balanced profile with core SpotX-style patches",
+  "enabled_patches": [
+    "ad_blocking",
+    "hide_podcasts",
+    "disable_auto_updates",
+    "experimental_features",
+    "analytics_blocking"
+  ]
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+workspace/decompiled_apk/*
+!workspace/decompiled_apk/.gitkeep
+workspace/build/
+workspace/output/
+workspace/keystore/

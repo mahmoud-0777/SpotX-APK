@@ -1,0 +1,8 @@
+{
+  "name": "lite",
+  "description": "Minimal profile focused on ad and analytics blocking",
+  "enabled_patches": [
+    "ad_blocking",
+    "analytics_blocking"
+  ]
+}
