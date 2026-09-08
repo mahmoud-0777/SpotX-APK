@@ -8,3 +8,7 @@ workspace/decompiled_apk/*
 workspace/build/
 workspace/output/
 workspace/keystore/
+.gradle/
+build/
+app/build/
+local.properties

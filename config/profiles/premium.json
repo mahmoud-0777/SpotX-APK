@@ -1,0 +1,7 @@
+{
+  "enabled_patches": [
+    "ad_blocking",
+    "disable_auto_updates",
+    "analytics_blocking"
+  ]
+}

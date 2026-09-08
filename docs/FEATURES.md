@@ -9,3 +9,9 @@ SpotX-APK includes the following patch groups:
 - **Analytics blocking**: Rewrites analytics endpoints and tracking package references.
 
 > Patch signatures can differ per Spotify version. Update `patches/patches.json` when new APK versions change smali strings/classes.
+
+Available profiles:
+
+- **Full**: all patch groups
+- **Premium**: ad/update/analytics focus
+- **Minimal**: ad-blocking only

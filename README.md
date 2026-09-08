@@ -1,66 +1,55 @@
 # SpotX-APK
 
-SpotX-APK is an Android-focused Spotify APK patcher inspired by SpotX, built around **apktool decompilation + smali patching**.
+SpotX-APK now includes an **installable Android app** that guides users through:
 
-## Project Structure
+1. Select Spotify APK
+2. Choose patch profile or custom patch set
+3. Patch in background with notifications
+4. Retrieve patched APK and review patch history
 
-- `workspace/decompiled_apk/` - Decompiled APK workspace
-- `patches/` - Patch definitions and smali patch templates
-- `scripts/` - Automation scripts (decompile, patch, rebuild, sign)
-- `docs/` - Setup, feature, and usage documentation
-- `config/profiles/` - Patch profiles for different behaviors
+## Android app setup
 
-## Requirements
+Requirements:
 
-- Python 3.10+
-- Java (for apktool/signing tools)
-- [apktool](https://ibotpeaches.github.io/Apktool/)
-- Android build-tools (`zipalign`, `apksigner`)
-- A keystore for signing patched APKs
+- Android Studio Iguana+ (or Gradle/AGP equivalents)
+- Android SDK 34
+- Device/emulator running Android 8.0+
 
-Install Python requirements:
+Build:
 
 ```bash
-pip install -r requirements.txt
+./gradlew :app:assembleDebug
 ```
 
-## Features
+Install the generated APK to your phone and open **SpotX APK Patcher**.
 
-- Ad-blocking
-- Hide podcasts/episodes/audiobooks
-- Disable auto-updates
-- Experimental feature modifications
-- Analytics blocking
+## Android app features
 
-Feature details: `/home/runner/work/SpotX-APK/SpotX-APK/docs/FEATURES.md`
+- APK picker (Storage Access Framework)
+- APK metadata (name/package/version/size)
+- Patch profiles: **Full**, **Premium**, **Minimal**
+- Custom patch toggles:
+  - Ad-blocking
+  - Hide podcasts/episodes/audiobooks
+  - Disable auto-updates
+  - Analytics blocking
+  - Experimental features
+- Background patch worker with progress notifications
+- Patched APK output in `Android/data/com.spotx.apk/files/PatchedApks`
+- Patch history list in-app
+- In-app help panel/tutorial
 
-## Installation / Setup
+## Supported Spotify versions
 
-1. Clone repository.
-2. Install requirements listed above.
-3. Prepare your Spotify APK input file.
-4. Create or provide a signing keystore.
-5. Choose a profile from `config/profiles/`.
+See `/home/runner/work/SpotX-APK/SpotX-APK/docs/SUPPORTED_VERSIONS.md`
 
-## Usage
+## Troubleshooting
 
-Quick workflow:
+See `/home/runner/work/SpotX-APK/SpotX-APK/docs/TROUBLESHOOTING.md`
 
-```bash
-bash scripts/patch_apk.sh \
-  /path/to/spotify.apk \
-  /path/to/keystore.jks \
-  your_alias \
-  your_password
-```
+## CLI patcher (existing)
 
-Detailed commands: `/home/runner/work/SpotX-APK/SpotX-APK/docs/USAGE.md`
+The original Python CLI workflow remains available.
 
-## Patch Management
-
-`patches/patches.json` controls patch groups and replacements. Profiles enable subsets of patch IDs:
-
-- `config/profiles/default.json`
-- `config/profiles/lite.json`
-
-Adjust these files when Spotify APK internals change between versions.
+- Usage: `/home/runner/work/SpotX-APK/SpotX-APK/docs/USAGE.md`
+- Feature details: `/home/runner/work/SpotX-APK/SpotX-APK/docs/FEATURES.md`
