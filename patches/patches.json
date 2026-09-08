@@ -1,0 +1,79 @@
+{
+  "patches": [
+    {
+      "id": "ad_blocking",
+      "description": "Disable known ad network endpoints and ad presentation toggles",
+      "targets": ["**/*.smali"],
+      "replacements": [
+        {
+          "match": "https://ads.spotify.com",
+          "replace": "https://127.0.0.1"
+        },
+        {
+          "match": "Lcom/spotify/ads/",
+          "replace": "Lcom/spotify/ads_disabled/"
+        }
+      ]
+    },
+    {
+      "id": "hide_podcasts",
+      "description": "Hide podcasts, episodes, and audiobooks entries",
+      "targets": ["**/*.smali"],
+      "replacements": [
+        {
+          "match": "podcast",
+          "replace": "music_only"
+        },
+        {
+          "match": "audiobook",
+          "replace": "music_only"
+        }
+      ]
+    },
+    {
+      "id": "disable_auto_updates",
+      "description": "Disable in-app update checks and forced upgrade routes",
+      "targets": ["**/*.smali"],
+      "replacements": [
+        {
+          "match": "Lcom/google/android/play/core/appupdate/",
+          "replace": "Lcom/google/android/play/core/appupdate_disabled/"
+        },
+        {
+          "match": "checkForUpdate",
+          "replace": "checkForUpdateDisabled"
+        }
+      ]
+    },
+    {
+      "id": "experimental_features",
+      "description": "Force selected internal feature flags to enabled",
+      "targets": ["**/*.smali"],
+      "replacements": [
+        {
+          "match": "feature_flag_experimental",
+          "replace": "feature_flag_experimental_enabled"
+        },
+        {
+          "match": "const/4 v0, 0x0",
+          "replace": "const/4 v0, 0x1"
+        }
+      ]
+    },
+    {
+      "id": "analytics_blocking",
+      "description": "Block analytics endpoints and tracker classes",
+      "targets": ["**/*.smali"],
+      "replacements": [
+        {
+          "match": "https://analytics.spotify.com",
+          "replace": "https://127.0.0.1"
+        },
+        {
+          "match": "Lcom/spotify/analytics/",
+          "replace": "Lcom/spotify/analytics_disabled/"
+        }
+      ]
+    }
+  ]
+}
