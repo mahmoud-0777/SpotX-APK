@@ -1,5 +1,13 @@
 # Usage Guide
 
+## Android app workflow
+
+1. Install and open the SpotX APK Patcher app.
+2. Tap **Select Spotify APK** and choose an APK file from storage.
+3. Choose profile (**Full**, **Premium**, or **Minimal**) or toggle patches manually.
+4. Tap **Patch APK** and wait for completion notification.
+5. Retrieve patched APK from `Android/data/com.spotx.apk/files/PatchedApks`.
+
 ## 1) Decompile only
 
 ```bash

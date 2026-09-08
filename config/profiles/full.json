@@ -1,0 +1,9 @@
+{
+  "enabled_patches": [
+    "ad_blocking",
+    "hide_podcasts",
+    "disable_auto_updates",
+    "analytics_blocking",
+    "experimental_features"
+  ]
+}
