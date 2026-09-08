@@ -1,14 +1,40 @@
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.log
-workspace/decompiled_apk/*
-!workspace/decompiled_apk/.gitkeep
-workspace/build/
-workspace/output/
-workspace/keystore/
+# Gradle files
 .gradle/
 build/
-app/build/
+dist/
+
+# Local configuration file
 local.properties
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.classpath
+*.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Android Studio
+*.apk
+*.aab
+*.dex
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+workspace/
+*.jks
+*.keystore
+.env

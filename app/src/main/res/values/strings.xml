@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SpotX APK Patcher</string>
+    <string name="app_name">SpotX-APK</string>
+    <string name="select_apk">Select Spotify APK</string>
+    <string name="patch_apk">Patch APK</string>
+    <string name="patching_progress">Patching in progress...</string>
+    <string name="patches_selected">Patches Selected</string>
 </resources>
